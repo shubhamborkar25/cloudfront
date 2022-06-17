@@ -1,0 +1,23 @@
+cloudfront
+
+cloudfront is used to decrese the latency 
+it work like edge location
+
+For S3
+
+	S3 service
+	--> create simple one bucket 
+	--> add file (index.html) 
+		--> html contex
+	
+	cloudfront service
+	--> create distribution
+		--> origin domain --> select s3 bucket
+		--> s3 bucket access --> Yes use OAI --> create new OAI --> select it
+							 --> select bucket policy --> Yes update
+		--> setting
+			--> default root object --> index.html
+	create
+	
+	wait for deploying
+	copy Distribution domain name and paste in browser --> opened your html page
