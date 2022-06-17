@@ -1,0 +1,30 @@
+cloudfront
+
+cloudfront is used to decrese the latency 
+it work like edge location
+
+For EC2 Load Balancer
+
+	EC2 service
+	--> launch instance with 
+		--> Security group --> http, https, ssh
+		--> User data --> html web page script
+						#!/bin/bash
+						yum update all
+						yum install httpd -y
+						systemctl start httpd
+						systemctl enable httpd
+						echo "hello Dunia " > /var/www/html/index.html
+	--> create application load balancer
+	
+	
+	cloudfront service
+	--> create distribution
+		--> origin domain --> load balancer
+		--> setting
+			--> default root object --> index.html
+	create
+	
+	wait for deploying
+	copy Distribution domain name and paste in browser --> opened your html page
+	
